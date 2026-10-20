@@ -1,0 +1,54 @@
+simulator:
+  bucket_count: 10
+  # Customer-like skew: lots of small objects, long tail of large ones.
+  # Format is "count:size" pairs summed across each source bucket.
+  size_distribution: "800:1KB,150:1MB,45:100MB,5:1GB"
+
+latency:
+  getObjectStreamLatency:         0
+  putObjectStreamLatency:         0
+  uploadPartStreamLatency:        0
+  getObjectLatency:               0
+  putObjectLatency:               0
+  uploadPartLatency:              0
+  listObjectsLatency:             0
+  headObjectLatency:              0
+  getObjectAclLatency:            0
+  getObjectTaggingLatency:        0
+  putObjectTaggingLatency:        0
+  putObjectAclLatency:            0
+  createMultipartUploadLatency:   0
+  completeMultipartUploadLatency: 0
+  abortMultipartUploadLatency:    0
+  deleteObjectLatency:            0
+  listBucketsLatency:             0
+  createBucketLatency:            0
+  headBucketLatency:              0
+  deleteBucketLatency:            0
+
+error_rate:
+  getObject:                0
+  putObject:                0
+  uploadPart:               0
+  listObjects:              0
+  headObject:               0
+  getObjectAcl:             0
+  getObjectTagging:         0
+  putObjectTagging:         0
+  putObjectAcl:             0
+  createMultipartUpload:    0
+  completeMultipartUpload:  0
+  abortMultipartUpload:     0
+  deleteObject:             0
+  listBuckets:              0
+  createBucket:             0
+  headBucket:               0
+  deleteBucket:             0
+  getObjectStream:          0
+  putObjectStream:          0
+  uploadPartStream:         0
+
+semaphore:
+  getSemaphoreCapacity:       500
+  putSemaphoreCapacity:       300
+  multipartSemaphoreCapacity: 200
