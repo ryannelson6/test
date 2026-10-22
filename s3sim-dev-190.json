@@ -1,0 +1,39 @@
+{
+  "config_s3_uri": "https://raw.githubusercontent.com/ryannelson6/test/refs/heads/s3sim-dev-190.yml/s3sim-dev-190.yml",
+  "aws_cloud_account_id": "5036c9ba-132e-4d6e-b08c-844c585e9928",
+  "aws_region_native_id": "us-west-2",
+  "node_type": "m5.4xlarge",
+  "data_replicas": 8,
+  "skip_teardown_days": 14,
+  "resources": {
+    "ebs_volume_size": 200,
+    "proxy": {
+      "cpu": "500m",
+      "mem": "2048Mi"
+    },
+    "app": {
+      "cpu": "4000m",
+      "mem": "24576Mi"
+    },
+    "mongo": {
+      "cpu": "4000m",
+      "mem": "16384Mi"
+    }
+  },
+  "protection": [
+    {
+      "sla_name": "s3sim-dev-190-daily",
+      "archival_location_name": "s3sim-dev-190-archival",
+      "bucket_prefix": "s3sim-src",
+      "count_start": 0,
+      "bucket_count": 10,
+      "frequencies": [
+        {
+          "time_unit": "Daily",
+          "frequency": 1,
+          "retention": 7
+        }
+      ]
+    }
+  ]
+}
