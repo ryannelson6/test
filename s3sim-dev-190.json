@@ -26,7 +26,7 @@
       "archival_location_name": "s3sim-dev-190-archival",
       "bucket_prefix": "s3sim-src",
       "count_start": 0,
-      "bucket_count": 10,
+      "bucket_count": 100,
       "frequencies": [
         {
           "time_unit": "Daily",
