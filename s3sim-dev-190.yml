@@ -1,5 +1,5 @@
 simulator:
-  bucket_count: 10
+  bucket_count: 100
   # Customer-like skew: lots of small objects, long tail of large ones.
   # Format is "count:size" pairs summed across each source bucket.
   size_distribution: "800:1KB,150:1MB,45:100MB,5:1GB"
